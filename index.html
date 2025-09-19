@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradSurge - Your Study Abroad Partner for Top University Admissions</title>
+    <meta name="description" content="Expert study abroad consultancy for students aiming for top universities in the UK, USA, Canada, and Germany. Get personalized guidance on applications, SOPs, and student visas.">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/heroicons@2.1.3/24/outline/index.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': {
+                            '50': '#f0fdf8',
+                            '100': '#dcfceb',
+                            '200': '#bbf7d6',
+                            '300': '#86efb9',
+                            '400': '#4ade8f',
+                            '500': '#22c55e',
+                            '600': '#16a34a',
+                            '700': '#15803d',
+                            '800': '#166534',
+                            '900': '#14532d',
+                            '950': '#052e16'
+                        },
+                        'secondary': '#FBBF24',
+                        'amber': {
+                            '50': '#fffbeb',
+                            '100': '#fef3c7',
+                            '200': '#fde68a',
+                            '300': '#fcd34d',
+                            '400': '#fbbf24',
+                            '500': '#f59e0b',
+                            '600': '#d97706',
+                            '700': '#b45309',
+                            '800': '#92400e',
+                            '900': '#78350f',
+                            '950': '#451a03'
+                        },
+                        'slate': {
+                            '50': '#f8fafc',
+                            '100': '#f1f5f9',
+                            '200': '#e2e8f0',
+                            '300': '#cbd5e1',
+                            '400': '#94a3b8',
+                            '500': '#64748b',
+                            '600': '#475569',
+                            '700': '#334155',
+                            '800': '#1e293b',
+                            '900': '#0f172a',
+                            '950': '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .text-balance {
+            text-wrap: balance;
+        }
+
+        .cta-button {
+            background-image: linear-gradient(to right, #FBBF24, #F59E0B);
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 0 20px 0 rgba(251, 191, 36, 0.4);
+        }
+
+        .nav-link.active {
+            color: #16a34a;
+        }
+
+        .dark .nav-link.active {
+            color: #4ade8f;
+        }
+
+        #back-to-top {
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+    <nav class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+    <a href="#" class="flex-shrink-0 flex items-center space-x-2">
+        <!-- Light Mode Logo (shown by default) -->
+        <img src="https://iili.io/KRLGXrx.png" alt="GradSurge Logo Light" class="w-12 h-12 object-contain dark:hidden" />
+
+        <!-- Dark Mode Logo (shown when dark mode is active) -->
+        <img src="https://iili.io/KRLACrX.png" alt="GradSurge Logo Dark" class="w-12 h-12 object-contain hidden dark:block" />
+
+        <span class="text-2xl font-bold text-primary-900 dark:text-slate-100" style="margin-left: -2px;">GradSurge</span>
+    </a>
+</div>
+
+                <div id="nav-links" class="hidden md:flex items-center space-x-1">
+                    <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">About</a>
+                    <a href="#process" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">Process</a>
+                    <a href="#services" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">Services</a>
+                    <a href="#faq" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">FAQs</a>
+                    <a href="#careers" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">Careers</a>
+                    <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-white px-3 py-2 text-sm font-medium rounded-md transition">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"><svg id="theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg><svg id="theme-icon-dark" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg></button>
+                    <a href="#consultation" class="cta-button text-primary-900 px-4 py-2 rounded-md text-sm font-medium transition duration-300 shadow-lg shadow-amber-500/10 hover:shadow-xl hover:-translate-y-0.5">Free Consultation</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 dark:text-slate-300"><svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg><svg class="h-6 w-6 hidden" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3"><a href="#about" class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 rounded-md">About</a><a href="#process" class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 rounded-md">Process</a><a href="#services" class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 rounded-md">Services</a><a href="#faq" class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 rounded-md">FAQs</a><a href="#contact" class="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 rounded-md">Contact</a><a href="#consultation" class="block w-full text-left mt-2 px-3 py-2 text-base font-medium text-white cta-button rounded-md">Free Consultation</a></div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative bg-slate-50 dark:bg-slate-950 pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-[800px] h-[800px] bg-primary-500/10 dark:bg-primary-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+        </div>
+        <div class="absolute inset-x-0 bottom-0"><svg viewBox="0 0 224 12" fill="currentColor" class="w-full -mb-1 text-slate-50 dark:text-slate-900" preserveAspectRatio="none">
+                <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12 L0,12 L0,0 Z"></path>
+            </svg></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-slate-900 dark:text-white" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-balance">Your Ambition, Our Expertise. Your Global Future Starts Here.</h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-300 mb-10 max-w-xl">Embarking on a study abroad journey is a life-changing decision. We transform the complexities of applications and admissions into a clear, personalized path to the world's most prestigious universities. Let's build your future, together.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#consultation" class="cta-button text-primary-900 px-8 py-3 rounded-md font-bold text-center transition duration-300 shadow-lg transform hover:scale-105">Book a Free Strategy Call</a>
+                        <a href="#services" class="bg-slate-900/5 dark:bg-white/5 border border-slate-900/10 dark:border-white/10 text-slate-800 dark:text-white px-8 py-3 rounded-md font-bold text-center transition duration-300 shadow-lg transform hover:scale-105">Explore Our Services</a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left" data-aos-delay="100">
+                    <img src="https://iili.io/KRvDGPS.png" alt="Happy international students collaborating on a university campus" class="rounded-lg shadow-2xl relative z-10">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-amber-400 rounded-full opacity-80 filter blur-lg"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary-700 rounded-lg transform rotate-12 filter blur-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">We're Not Just Consultants. We're Your Mentors.</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">In a world of limitless information but scarce guidance, we provide the clarity you deserve. Founded by students, we have walked the path you're on. We blend our firsthand experience with powerful, data-driven insights to architect your success story.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://iili.io/KRL38aS.png" alt="A team of education consultants strategizing in a modern office" class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105">
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold text-primary-900 dark:text-white mb-4">Our Mission: To Unlock Global Potential</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-8">We believe that brilliance knows no borders, but opportunity often does. Our purpose is to dismantle those barriers. We are passionately committed to empowering every deserving student with the strategy, mentorship, and unwavering support needed to earn their place at a university that will redefine their future.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-20 md:py-28 bg-slate-100 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Your Pathway to a World-Class Education</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We've meticulously engineered a five-step journey that turns anxiety into anticipation. Each stage is designed to build momentum, ensuring you arrive at your goal with unparalleled confidence and preparation.</p>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto" data-aos="fade-up">
+                <div class="absolute left-10 top-0 h-full w-0.5 bg-slate-300 dark:bg-slate-700 lg:hidden"></div>
+                <div class="hidden lg:block absolute top-10 left-0 w-full h-0.5 bg-slate-300 dark:bg-slate-700"></div>
+
+                <div class="relative grid grid-cols-1 lg:grid-cols-5 gap-y-16 lg:gap-y-0">
+
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-center">
+                        <div class="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="w-20 h-20 rounded-full bg-primary-600 text-white flex items-center justify-center text-2xl font-bold ring-8 ring-slate-100 dark:ring-slate-900 z-10 relative">1</div>
+                        </div>
+                        <div class="pt-8 lg:pt-28">
+                            <h3 class="text-lg font-semibold text-primary-900 dark:text-white mb-2">Deep-Dive Profile Assessment</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 px-4 lg:px-2">Our journey begins with you. We explore your academic history, unique talents, and career ambitions to forge a strategic foundation for your application.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-center">
+                        <div class="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="w-20 h-20 rounded-full bg-primary-600 text-white flex items-center justify-center text-2xl font-bold ring-8 ring-slate-100 dark:ring-slate-900 z-10 relative">2</div>
+                        </div>
+                        <div class="pt-8 lg:pt-28">
+                            <h3 class="text-lg font-semibold text-primary-900 dark:text-white mb-2">Strategic University Shortlisting</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 px-4 lg:px-2">Leveraging our deep institutional knowledge, we curate a bespoke list of 'best-fit' universities, perfectly balancing your dream schools with strategic choices.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-center">
+                        <div class="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="w-20 h-20 rounded-full bg-primary-600 text-white flex items-center justify-center text-2xl font-bold ring-8 ring-slate-100 dark:ring-slate-900 z-10 relative">3</div>
+                        </div>
+                        <div class="pt-8 lg:pt-28">
+                            <h3 class="text-lg font-semibold text-primary-900 dark:text-white mb-2">Narrative & Application Crafting</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 px-4 lg:px-2">This is where your story comes to life. We guide you in crafting a compelling Statement of Purpose that resonates with admission committees and ensures a flawless application.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-center">
+                        <div class="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="w-20 h-20 rounded-full bg-primary-600 text-white flex items-center justify-center text-2xl font-bold ring-8 ring-slate-100 dark:ring-slate-900 z-10 relative">4</div>
+                        </div>
+                        <div class="pt-8 lg:pt-28">
+                            <h3 class="text-lg font-semibold text-primary-900 dark:text-white mb-2">Focused Exam Preparation</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 px-4 lg:px-2">From GRE and GMAT to TOEFL and IELTS, we equip you with proven strategies and personalized coaching. Ensureing you achieve the scores that unlock doors to your dream universities.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-center lg:items-start text-center lg:text-center">
+                        <div class="lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+                            <div class="w-20 h-20 rounded-full bg-primary-600 text-white flex items-center justify-center text-2xl font-bold ring-8 ring-slate-100 dark:ring-slate-900 z-10 relative">5</div>
+                        </div>
+                        <div class="pt-8 lg:pt-28">
+                            <h3 class="text-lg font-semibold text-primary-900 dark:text-white mb-2">Visa & Financial Guidance</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 px-4 lg:px-2">We demystify the visa process, providing meticulous documentation support and mock interviews to ensure you secure your visa with absolute confidence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Your Complete Toolkit for Admission Success</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We've designed a comprehensive suite of services that addresses every facet of your journey, leaving no stone unturned and no opportunity missed.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">AI-Powered Profile Analysis</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Our proprietary tools analyze your academic and extracurricular profile against thousands of data points to generate hyper-personalized university recommendations.</p>
+                    </div>
+                </div>
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Strategic University Selection</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Move beyond generic rankings. We align your career ambitions and academic strengths with programs that offer the best return on investment and future growth.</p>
+                    </div>
+                </div>
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">SOP & LOR Mentorship</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Craft a narrative that sets you apart. Our expert editors help you refine your unique story into a powerful and persuasive Statement of Purpose and LORs.</p>
+                    </div>
+                </div>
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Exam Preparation Excellence</h3>
+                        <p class="text-slate-600 dark:text-slate-400">From GRE and GMAT to TOEFL and IELTS, we provide structured training, proven strategies, and personalized guidance that maximize your scores and strengthen your global applications.</p>
+                    </div>
+                </div>
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Scholarship & Loan Advisory</h3>
+                        <p class="text-slate-600 dark:text-slate-400">We help you unlock financial aid opportunities, from identifying scholarships to navigating education loan applications, making your dream education affordable.</p>
+                    </div>
+                </div>
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md">
+                        <div class="bg-gradient-to-br from-primary-600 to-primary-800 w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30"><svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12" />
+                            </svg></div>
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Comprehensive Visa Support</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Our industry-leading success rate comes from meticulous documentation support and rigorous mock interviews that build the confidence for visa success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="py-20 md:py-28 bg-primary-900 text-white relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-[1000px] h-[1000px] bg-amber-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-balance">Ready to Take the First Step?</h2>
+                    <p class="text-lg text-primary-200 mb-8 max-w-lg">Your ambition deserves a world-class education. Book a free, no-obligation strategy call with our senior counsellors. Let's map out your unique journey to a top global university and turn your dream into a concrete plan.</p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:info.gradsurge@gmail.com" class="bg-white text-primary-900 px-8 py-3 rounded-md font-bold hover:bg-slate-200 transition duration-300 transform hover:scale-105">Email Us Directly</a>
+                        <a href="#contact" class="border-2 border-primary-700 text-white px-8 py-3 rounded-md font-bold hover:bg-primary-800 transition duration-300 transform hover:scale-105">Contact Info</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg shadow-2xl p-8 transform transition-transform duration-300 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-6 text-white text-center">Reach out to us Today !</h3>
+                        <form id="StrategyCallDatabase" method="POST" action="https://script.google.com/macros/s/AKfycbx94DzgousWdr_K4kHiUvPBysrcWFswmwbqUQFVjpGdPr3_T17zAzOScSs2mE9Vds2Qtg/exec">
+                            <div class="space-y-4">
+                                <input type="text" placeholder="Your Name" name="name" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <input type="email" placeholder="Email Address" name="email" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <input type="tel" placeholder="Phone Number" name="phone" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <button type="submit" class="w-full cta-button text-primary-900 px-4 py-3 rounded-md font-bold transition duration-300 transform hover:scale-105">Schedule a Call</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="waitlist" class="py-20 md:py-28 bg-primary-950 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The Future of University Applications is Here.</h2>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+            <p class="max-w-2xl mx-auto text-primary-200 text-lg mb-8">Introducing GradSurge AI: our revolutionary platform that automates and integrates your entire application journey. From university matching to document management and deadline tracking, it's your personal admission control center. Be the first to experience it.</p>
+            <div class="mb-8">
+            </div>
+            <form id="Waitlist" method="POST" class="max-w-lg mx-auto flex" action="https://script.google.com/macros/s/AKfycbyM5N1eFX3UypCQY7Uh_-3x1328CALR9ro4zU5WaE7g1zT6JGb764C5I7sudT5DhUmr/exec">
+                <input type="email"  name="email" placeholder="Enter your email to join the waitlist" required class="w-full px-5 py-3 rounded-l-md focus:outline-none text-slate-800 border-2 border-transparent focus:border-amber-400 placeholder-slate-500">
+                <button type="submit" class="cta-button text-primary-900 px-6 py-3 rounded-r-md font-bold transition duration-300">Join Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 md:py-28 bg-slate-100 dark:bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Your Questions, Answered</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We believe in complete transparency. Here are the answers to some of the most common questions we receive.</p>
+            </div>
+            <div class="space-y-4" data-aos="fade-up">
+                <div class="bg-slate-50 dark:bg-slate-950 rounded-lg shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                        <span class="text-lg font-semibold text-primary-900 dark:text-white">How early should I start my study abroad application process?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 pt-0 text-slate-600 dark:text-slate-300">
+                            <p>For optimal results, we recommend starting the process 8-12 months before your intended intake. This provides ample time for profile evaluation, test preparation (if needed), university shortlisting, meticulous document preparation (SOP, LORs), and submitting applications well before deadlines. Starting early also significantly increases your chances for scholarships, which often have earlier deadlines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-950 rounded-lg shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                        <span class="text-lg font-semibold text-primary-900 dark:text-white">How does GradSurge select the right universities for my profile?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 pt-0 text-slate-600 dark:text-slate-300">
+                            <p>Our shortlisting process is a blend of art and science. We begin with our AI-powered tool that analyzes your GPA, test scores, work experience, and budget. Then, our experienced counsellors add the human element. We consider factors like course curriculum, faculty research, internship opportunities, and your long-term career goals. We create a balanced list of 'Ambitious', 'Target', and 'Safe' universities to maximize your admission chances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-950 rounded-lg shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                        <span class="text-lg font-semibold text-primary-900 dark:text-white">Can you guarantee admission or a visa?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 pt-0 text-slate-600 dark:text-slate-300">
+                            <p>No ethical consultancy can guarantee admission or a visa, as the final decision rests with the university's admissions committee and the respective country's immigration authorities. However, we can promise that we will provide you with the most accurate information, meticulous application support, and expert guidance to build the strongest possible profile which significantly maximizes your probability of success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-950 rounded-lg shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                        <span class="text-lg font-semibold text-primary-900 dark:text-white">What are the costs involved?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 pt-0 text-slate-600 dark:text-slate-300">
+                            <p>Study abroad costs include university tuition, living expenses, health insurance, visa fees, and travel. These vary widely by country and university. We provide a detailed cost breakdown during our initial counselling. Regarding our fees, we operate on a transparent model with customized packages based on the level of service you require. We discuss all charges upfront during the free strategy call, ensuring there are no hidden costs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 dark:bg-slate-950 rounded-lg shadow-md">
+                    <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                        <span class="text-lg font-semibold text-primary-900 dark:text-white">How do you help with scholarships and financial aid?</span>
+                        <svg class="faq-icon w-6 h-6 text-primary-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="p-6 pt-0 text-slate-600 dark:text-slate-300">
+                            <p>Our support for financial aid is comprehensive. We maintain an extensive database of scholarships, grants, and assistantships. We help you identify opportunities you are eligible for, guide you in writing compelling scholarship essays, and ensure all financial documents are correctly submitted. We also provide guidance on education loans, connecting you with trusted financial institutions that offer favorable terms for international students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="py-20 md:py-28 bg-slate-100 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Join the Revolution in Global Education</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We're a team of innovators, mentors, and tech enthusiasts on a mission to redefine the study abroad journey. If you're driven by impact and excellence, you belong here. Don't see a perfect fit below? We believe in creating roles for exceptional talent. If you have a unique skill set that can propel our mission forward, we want to hear from you.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">AI/ML Expert</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Got a brain for big data and a passion for prediction? You'll be our digital Dumbledore, architecting the intelligent engine that turns student profiles into dream university admissions.</p>
+                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Prompt Engineer</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Are you a whisperer to the great language models? We need your magic words to translate student ambitions into powerful AI outputs that craft the perfect application narrative.</p>
+                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Marketing Strategist</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Ready to tell the world's most compelling success stories? You'll be the mastermind behind our brand, crafting campaigns that make GradSurge a household name for global aspirants.</p>
+                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Senior Study Abroad Counsellor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">More than a guide, you're a dream-weaver. You'll mentor students, turning their anxiety into confidence and their applications into acceptances. If changing lives is your calling, your office is waiting.</p>
+                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Full-Stack Developer</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Dream in code? Build the future with us. You’ll develop, deploy, and maintain the GradSurge AI platform from the ground up. Your code will directly empower thousands of students.</p>
+                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">UI/UX Designer</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Obsessed with creating intuitive experiences? You’ll design the interface that makes the complex journey of studying abroad feel simple, exciting, and beautiful. You make our tech feel human.</p>
+                        <a href="mailto:info.gradsurge@gmail.com?subject=Career Application: UI/UX Designer" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Let's Start the Conversation</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">Whether you have a specific question or want to explore your options, our team is ready to provide the clarity you need. Reach out today and let's begin this exciting journey.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="bg-slate-100 dark:bg-slate-950 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-primary-900 dark:text-white">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-800 w-12 h-12 rounded-full flex items-center justify-center"><svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <p class="text-slate-600 dark:text-slate-400">Email us at</p><a href="mailto:info.gradsurge@gmail.com" class="text-primary-800 dark:text-primary-300 hover:text-amber-500">info.gradsurge@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-800 w-12 h-12 rounded-full flex items-center justify-center"><svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" />
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <p class="text-slate-600 dark:text-slate-400">Call us at</p><a href="tel:+919892604962" class="text-primary-800 dark:text-primary-300 hover:text-amber-500">+91 9892604962</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-800 w-12 h-12 rounded-full flex items-center justify-center"><svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <p class="text-slate-600 dark:text-slate-400">Find us at</p>
+                                    <p class="text-primary-900 dark:text-slate-200">A-601, Saptarshi Classic, Nehru Nagar, Kurla East, Mumbai</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="100">
+                    <div class="bg-slate-100 dark:bg-slate-950 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-primary-900 dark:text-white">Ready to Start your Journey ?</h3>
+                        <form id="LeadsDatabase" method="POST" action="https://script.google.com/macros/s/AKfycbx94DzgousWdr_K4kHiUvPBysrcWFswmwbqUQFVjpGdPr3_T17zAzOScSs2mE9Vds2Qtg/exec">
+                            <div class="space-y-4">
+                               <input type="text" placeholder="Your Name" name="name" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <input type="email" placeholder="Email Address" name="email" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <input type="tel" placeholder="Phone Number" name="phone" class="w-full px-4 py-3 border border-slate-300/20 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-900/50 text-white placeholder-slate-300">
+                                <button type="submit" class="w-full cta-button text-primary-900 px-4 py-3 rounded-md font-bold transition duration-300 transform hover:scale-105">Send us a message now !</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold mb-4">GradSurge</h3>
+                    <p class="text-primary-200 mb-4">Your trusted partner for study abroad guidance and university admissions.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-primary-200 hover:text-amber-400">About Us</a></li>
+                        <li><a href="#process" class="text-primary-200 hover:text-amber-400">Our Process</a></li>
+                        <li><a href="#services" class="text-primary-200 hover:text-amber-400">Services</a></li>
+                        <li><a href="#contact" class="text-primary-200 hover:text-amber-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-primary-200 hover:text-amber-400">Profile Analysis</a></li>
+                        <li><a href="#services" class="text-primary-200 hover:text-amber-400">University Selection</a></li>
+                        <li><a href="#services" class="text-primary-200 hover:text-amber-400">SOP Assistance</a></li>
+                        <li><a href="#services" class="text-primary-200 hover:text-amber-400">Visa Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-primary-200 mb-4">Subscribe for updates on universities, scholarships, and application tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-md focus:outline-none text-slate-800 border-2 border-transparent focus:border-amber-400">
+                        <button type="submit" class="cta-button px-4 py-2 rounded-r-md transition duration-300"><svg class="w-5 h-5 text-primary-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg></button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-primary-900 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="text-primary-300 mb-4 md:mb-0">© 2025 GradSurge. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-primary-300 hover:text-amber-400">Privacy Policy</a>
+                    <a href="#" class="text-primary-300 hover:text-amber-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-5 right-5 bg-primary-600 hover:bg-primary-700 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transform translate-y-4 z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // --- AOS Initialization ---
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 120
+        });
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.querySelectorAll('svg').forEach(icon => icon.classList.toggle('hidden'));
+        });
+
+        // --- Dark/Light Mode Toggle ---
+        const themeToggles = document.querySelectorAll('#theme-toggle');
+        const lightIcons = document.querySelectorAll('#theme-icon-light');
+        const darkIcons = document.querySelectorAll('#theme-icon-dark');
+        const setTheme = (isDark) => {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                lightIcons.forEach(icon => icon.classList.remove('hidden'));
+                darkIcons.forEach(icon => icon.classList.add('hidden'));
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                lightIcons.forEach(icon => icon.classList.add('hidden'));
+                darkIcons.forEach(icon => icon.classList.remove('hidden'));
+            }
+        };
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+        themeToggles.forEach(toggle => toggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark'))));
+
+        // --- Testimonial Carousel ---
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+        // --- Dynamic Counter, Scroll Spy, Back to Top, FAQ Accordion ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#nav-links a.nav-link');
+            const backToTopButton = document.getElementById('back-to-top');
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            const LeadsForm = document.getElementById('StrategyCallDatabase'); // Make sure this ID matches your form's ID
+            if (LeadsForm) {
+            LeadsForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // This stops the browser from redirecting
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Submitting...';
+            submitButton.disabled = true;
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    // Show a friendly success alert
+                    alert('Thank you! Your request has been submitted successfully. We will be in touch soon.');
+                    this.reset(); // Clear the form fields
+                } else {
+                    // If the script returns an error for some reason
+                    throw new Error(data.message || 'Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('Oops! Something went wrong. Please try again.');
+            })
+            .finally(() => {
+                // Restore the button to its original state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+    }
+    const waitlistform = document.getElementById('Waitlist'); // Make sure this ID matches your form's ID
+            if (waitlistform) {
+            waitlistform.addEventListener('submit', function (e) {
+            e.preventDefault(); // This stops the browser from redirecting
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Submitting...';
+            submitButton.disabled = true;
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    // Show a friendly success alert
+                    alert('Congratulation! Your email has been added to our waitlist.');
+                    this.reset(); // Clear the form fields
+                } else {
+                    // If the script returns an error for some reason
+                    throw new Error(data.message || 'Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('Oops! Something went wrong. Please try again.');
+            })
+            .finally(() => {
+                // Restore the button to its original state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+    }
+            const consultationForm = document.getElementById('LeadsDatabase'); // Make sure this ID matches your form's ID
+            if (consultationForm) {
+            consultationForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // This stops the browser from redirecting
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Submitting...';
+            submitButton.disabled = true;
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    // Show a friendly success alert
+                    alert('Thank you! Your request has been submitted successfully. We will be in touch soon.');
+                    this.reset(); // Clear the form fields
+                } else {
+                    // If the script returns an error for some reason
+                    throw new Error(data.message || 'Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('Oops! Something went wrong. Please try again.');
+            })
+            .finally(() => {
+                // Restore the button to its original state
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            });
+        });
+    }
+
+            // Counter animation function
+            const animateCounter = (element, start, end, duration, suffix = '') => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.textContent = Math.floor(progress * (end - start) + start) + suffix;
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            // Intersection Observer for counters and scroll spy
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Activate nav link
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+
+                        // Trigger counters
+                        if (entry.target.id === 'about' && !entry.target.hasAttribute('data-counted')) {
+                            animateCounter(document.getElementById('students-counselled'), 0, 1500, 2000, '+');
+                            animateCounter(document.getElementById('university-partnerships'), 0, 500, 2000, '+');
+                            animateCounter(document.getElementById('visa-success-rate'), 0, 98, 2000, '%');
+                            entry.target.setAttribute('data-counted', 'true');
+                        }
+
+                        // Trigger waitlist counter
+                        if (entry.target.id === 'waitlist' && !entry.target.hasAttribute('data-counted')) {
+                            animateCounter(document.getElementById('waitlist-counter'), 0, 2847, 2500, '');
+                            entry.target.setAttribute('data-counted', 'true');
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '-50% 0px -50% 0px'
+            });
+
+            sections.forEach(section => observer.observe(section));
+
+            // Back to Top Button logic
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'translate-y-4');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'translate-y-4');
+                }
+            });
+            backToTopButton.addEventListener('click', () => window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            }));
+
+            // FAQ Accordion Logic
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('.faq-icon');
+
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.style.transform = 'rotate(45deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
