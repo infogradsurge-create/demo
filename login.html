@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - GradSurge</title>
+    <meta name="description" content="Log in to your GradSurge account.">
+
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': { '50': '#f0fdf8', '100': '#dcfceb', '200': '#bbf7d6', '300': '#86efb9', '400': '#4ade8f', '500': '#22c55e', '600': '#16a34a', '700': '#15803d', '800': '#166534', '900': '#14532d', '950': '#052e16' },
+                        'secondary': '#FBBF24',
+                        'amber': { '50': '#fffbeb', '100': '#fef3c7', '200': '#fde68a', '300': '#fcd34d', '400': '#fbbf24', '500': '#f59e0b', '600': '#d97706', '700': '#b45309', '800': '#92400e', '900': '#78350f', '950': '#451a03' },
+                        'slate': { '50': '#f8fafc', '100': '#f1f5f9', '200': '#e2e8f0', '300': '#cbd5e1', '400': '#94a3b8', '500': '#64748b', '600': '#475569', '700': '#334155', '800': '#1e293b', '900': '#0f172a', '950': '#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .cta-button { background-image: linear-gradient(to right, #FBBF24, #F59E0B); }
+    </style>
+</head>
+
+<body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+
+    <nav class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center space-x-2">
+                        <img src="https://iili.io/KRLGXrx.png" alt="GradSurge Logo Light" class="w-12 h-12 object-contain dark:hidden" />
+                        <img src="https://iili.io/KRLACrX.png" alt="GradSurge Logo Dark" class="w-12 h-12 object-contain hidden dark:block" />
+                        <span class="text-2xl font-bold text-primary-900 dark:text-slate-100" style="margin-left: -2px;">GradSurge</span>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <svg id="theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg id="theme-icon-dark" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="pt-32 pb-20 flex items-center justify-center min-h-screen">
+        <div class="max-w-md w-full mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-lg border border-slate-200 dark:border-slate-800">
+                <h1 class="text-3xl font-bold text-center text-primary-900 dark:text-white mb-2">Welcome Back</h1>
+                <p class="text-center text-slate-600 dark:text-slate-400 mb-8">Log in to continue.</p>
+
+                <form id="login-form" class="space-y-6">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Email Address</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required class="w-full px-4 py-3 mt-1 border border-slate-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400">
+                    </div>
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-700 dark:text-slate-300">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="w-full px-4 py-3 mt-1 border border-slate-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400">
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full cta-button text-primary-900 px-4 py-3 rounded-md font-bold transition duration-300 transform hover:scale-105">Log In</button>
+                    </div>
+                </form>
+
+                <div class="my-6 flex items-center justify-center">
+                    <span class="border-t border-slate-300 dark:border-slate-700 flex-grow"></span>
+                    <span class="px-4 text-slate-500 dark:text-slate-400 text-sm">OR</span>
+                    <span class="border-t border-slate-300 dark:border-slate-700 flex-grow"></span>
+                </div>
+
+                <div>
+                    <button id="google-login-button" class="w-full flex items-center justify-center bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 px-4 py-3 rounded-md font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+                        <svg class="w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12s5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24s8.955,20,20,20s20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571l6.19,5.238C42.022,35.545,44,30.036,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path></svg>
+                        Sign in with Google
+                    </button>
+                </div>
+
+                <p class="text-sm text-center text-slate-600 dark:text-slate-400 mt-8">
+                    Don't have an account? <a href="register.html" class="font-medium text-amber-500 hover:text-amber-600">Register here</a>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-primary-950 text-white">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="border-t border-primary-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="text-primary-300 mb-4 md:mb-0">© 2025 GradSurge. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="privacy-policy.html" class="text-primary-300 hover:text-amber-400">Privacy Policy</a>
+                    <a href="#" class="text-primary-300 hover:text-amber-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="auth.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const lightIcon = document.getElementById('theme-icon-light');
+            const darkIcon = document.getElementById('theme-icon-dark');
+
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    lightIcon.classList.remove('hidden');
+                    darkIcon.classList.add('hidden');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    lightIcon.classList.add('hidden');
+                    darkIcon.classList.remove('hidden');
+                }
+            };
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('theme');
+            
+            setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+
+            themeToggle.addEventListener('click', () => {
+                setTheme(!document.documentElement.classList.contains('dark'));
+            });
+        });
+    </script>
+</body>
+</html>
