@@ -112,6 +112,78 @@
         .faq-icon {
             transition: transform 0.3s ease-in-out;
         }
+
+        /* Popup Styles */
+        .popup-hidden {
+            display: none;
+        }
+
+        #popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        #popup-form-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px 25px 25px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1001;
+            width: 90%;
+            max-width: 700px;
+            max-height: 90vh;
+            overflow-y: auto;
+            color: #333;
+        }
+
+        /* Dark Mode Styles for Popup */
+        .dark #popup-form-container {
+            background-color: #1e293b; /* Corresponds to dark:bg-slate-800 */
+            color: #cbd5e1; /* Corresponds to dark:text-slate-300 */
+        }
+
+        .dark .popup-content h2 {
+            color: #ffffff;
+        }
+
+        .dark #close-popup-btn {
+            color: #94a3b8; /* slate-400 */
+        }
+        .dark #close-popup-btn:hover {
+            color: #ffffff;
+        }
+        /* End Dark Mode Styles */
+
+        .popup-content iframe {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%; /* Ensures iframe is responsive */
+        }
+
+        #close-popup-btn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        #close-popup-btn:hover {
+            color: #000;
+        }
     </style>
 </head>
 <!-- SCROLL PROGRESS BAR START -->
@@ -593,65 +665,77 @@
     </section>
 
     <section id="careers" class="py-20 md:py-28 bg-slate-100 dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Join the Revolution in Global Education</h2>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
-                <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We're a team of innovators, mentors, and tech enthusiasts on a mission to redefine the study abroad journey. If you're driven by impact and excellence, you belong here. Don't see a perfect fit below? We believe in creating roles for exceptional talent. If you have a unique skill set that can propel our mission forward, we want to hear from you.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">AI/ML Expert</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Got a brain for big data and a passion for prediction? You'll be our digital Dumbledore, architecting the intelligent engine that turns student profiles into dream university admissions.</p>
-                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Prompt Engineer</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Are you a whisperer to the great language models? We need your magic words to translate student ambitions into powerful AI outputs that craft the perfect application narrative.</p>
-                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Marketing Strategist</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Ready to tell the world's most compelling success stories? You'll be the mastermind behind our brand, crafting campaigns that make GradSurge a household name for global aspirants.</p>
-                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Senior Study Abroad Counsellor</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">More than a guide, you're a dream-weaver. You'll mentor students, turning their anxiety into confidence and their applications into acceptances. If changing lives is your calling, your office is waiting.</p>
-                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Full-Stack Developer</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Dream in code? Build the future with us. You’ll develop, deploy, and maintain the GradSurge AI platform from the ground up. Your code will directly empower thousands of students.</p>
-                        <a href="https://forms.gle/PWDnuxBvuefPAkVH6" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
-                        <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">UI/UX Designer</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Obsessed with creating intuitive experiences? You’ll design the interface that makes the complex journey of studying abroad feel simple, exciting, and beautiful. You make our tech feel human.</p>
-                        <a href="mailto:info.gradsurge@gmail.com?subject=Career Application: UI/UX Designer" class="text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
-                    </div>
-                </div>
-
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-900 dark:text-white mb-4">Join the Revolution in Global Education</h2>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto mb-6 rounded-full"></div>
+            <p class="max-w-3xl mx-auto text-slate-600 dark:text-slate-300 text-lg">We're a team of innovators, mentors, and tech enthusiasts on a mission to redefine the study abroad journey. If you're driven by impact and excellence, you belong here. Don't see a perfect fit below? We believe in creating roles for exceptional talent. If you have a unique skill set that can propel our mission forward, we want to hear from you.</p>
         </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">AI/ML Expert</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Got a brain for big data and a passion for prediction? You'll be our digital Dumbledore, architecting the intelligent engine that turns student profiles into dream university admissions.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Prompt Engineer</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Are you a whisperer to the great language models? We need your magic words to translate student ambitions into powerful AI outputs that craft the perfect application narrative.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Marketing Strategist</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Ready to tell the world's most compelling success stories? You'll be the mastermind behind our brand, crafting campaigns that make GradSurge a household name for global aspirants.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Senior Study Abroad Counsellor</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">More than a guide, you're a dream-weaver. You'll mentor students, turning their anxiety into confidence and their applications into acceptances. If changing lives is your calling, your office is waiting.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">Full-Stack Developer</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Dream in code? Build the future with us. You’ll develop, deploy, and maintain the GradSurge AI platform from the ground up. Your code will directly empower thousands of students.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="p-1 rounded-lg bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 shadow-lg hover:shadow-primary-500/20 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-slate-50 dark:bg-slate-900 h-full p-8 rounded-md flex flex-col">
+                    <h3 class="text-xl font-semibold mb-3 text-primary-900 dark:text-white">UI/UX Designer</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Obsessed with creating intuitive experiences? You’ll design the interface that makes the complex journey of studying abroad feel simple, exciting, and beautiful. You make our tech feel human.</p>
+                    <a href="#" class="open-popup-btn text-center w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-4 py-2 rounded-md font-bold hover:shadow-lg hover:shadow-primary-500/30 transition duration-300">Apply Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </section>
+     
+    <div id="popup-overlay" class="popup-hidden"></div>
+        <div id="popup-form-container" class="popup-hidden">
+        <div class="popup-content">
+        <span id="close-popup-btn">&times;</span>
+        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-2">Apply Now</h2>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Please fill out the form below to apply for the position.</p>
+        
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVkcU0zpsqoVhFYWSW0nLpTQTgwSH_0HONKFJ_neSjUF-nRQ/viewform?embedded=true" width="640" height="1507" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+
 
     <section id="contact" class="py-20 md:py-28 bg-slate-50 dark:bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -764,6 +848,44 @@
     </button>
 
     <script>
+
+         const openPopupButtons = document.querySelectorAll('.open-popup-btn');
+    const closePopupBtn = document.getElementById('close-popup-btn');
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupContainer = document.getElementById('popup-form-container');
+
+    // Function to open the popup
+    function openPopup() {
+        if (popupOverlay && popupContainer) {
+            popupOverlay.classList.remove('popup-hidden');
+            popupContainer.classList.remove('popup-hidden');
+        }
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        if (popupOverlay && popupContainer) {
+            popupOverlay.classList.add('popup-hidden');
+            popupContainer.classList.add('popup-hidden');
+        }
+    }
+
+    // Add event listener to all "Apply Now" buttons
+    openPopupButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the link from navigating to "#"
+            openPopup();
+        });
+    });
+
+    // Add event listeners for closing the popup
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', closePopup);
+    }
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', closePopup); // Also close when clicking the overlay
+    }
+
         // --- AOS Initialization ---
         AOS.init({
             duration: 800,
