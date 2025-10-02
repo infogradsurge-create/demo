@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - GradSurge</title>
-    <meta name="description" content="Privacy Policy for GradSurge, your study abroad partner.">
+    <meta name="description" content="Comprehensive Privacy Policy for GradSurge, your AI-powered study abroad partner.">
 
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -32,10 +30,15 @@
         .cta-button { background-image: linear-gradient(to right, #FBBF24, #F59E0B); }
     </style>
 </head>
-
+<!-- SCROLL PROGRESS BAR START -->
+<div class="fixed top-0 left-0 w-full h-[5px] bg-slate-200 dark:bg-slate-800 z-[10000]">
+    <div id="scroll-progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-amber-500" style="width: 0%;"></div>
+</div>
+<!-- SCROLL PROGRESS BAR END -->
 <body class="bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
 
-    <!-- Reusing your existing Navigation Bar -->
+    
+    <!-- Navigation Bar -->
     <nav class="bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -46,7 +49,15 @@
                         <span class="text-2xl font-bold text-primary-900 dark:text-slate-100" style="margin-left: -2px;">GradSurge</span>
                     </a>
                 </div>
-                <div class="hidden md:flex items-center space-x-4">
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <svg id="theme-icon-light" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg id="theme-icon-dark" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
                     <a href="/index.html" class="cta-button text-primary-900 px-4 py-2 rounded-md text-sm font-medium transition duration-300 shadow-lg shadow-amber-500/10 hover:shadow-xl hover:-translate-y-0.5">Back to Home</a>
                 </div>
             </div>
@@ -57,64 +68,564 @@
     <main class="pt-32 pb-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-800 dark:text-slate-200">
             <h1 class="text-4xl font-extrabold text-primary-900 dark:text-white mb-4">Privacy Policy</h1>
-            <p class="text-slate-600 dark:text-slate-400 mb-8">Last updated: [Enter Today's Date]</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2"><strong>Last Updated:</strong> October 2, 2025</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-2"><strong>Company:</strong> Gradsurge Technologies Private Limited</p>
+            <p class="text-slate-600 dark:text-slate-400 mb-8"><strong>Platform:</strong> AI-Powered Study Abroad Guidance Platform</p>
 
-            <div class="space-y-6 prose dark:prose-invert prose-lg max-w-none">
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">1. Introduction</h2>
-                <p>Welcome to GradSurge ("we," "our," or "us"). We are committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, share, and protect your information when you visit our website, use our services, or interact with us. By using our website and services, you agree to the collection and use of information in accordance with this policy.</p>
+            <div class="space-y-8 prose dark:prose-invert prose-lg max-w-none">
+                
+                <!-- Section 1 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">1. Introduction</h2>
+                    <p>Welcome to Gradsurge ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered study abroad guidance platform, including our website, mobile applications, and related services (collectively, the "Service").</p>
+                    <p class="font-semibold">By using our Service, you consent to the data practices described in this Privacy Policy.</p>
+                </section>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">2. Information We Collect</h2>
-                <p>We may collect several types of information from and about users of our website, including:</p>
-                <ul>
-                    <li><strong>Information You Provide Directly:</strong> When you fill out our "Free Consultation," "Contact," or "Waitlist" forms, we collect your name, email address, and phone number. As you engage with our services, we may collect more detailed personal information necessary for providing study abroad guidance, such as academic history, work experience, financial information, and passport details.</li>
-                    <li><strong>Information We Collect Automatically:</strong> As you navigate through our site, we may automatically collect certain information about your equipment, browsing actions, and patterns, including your IP address, browser type, and operating system.</li>
-                </ul>
+                <!-- Section 2 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">2. Information We Collect</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">2.1 Personal Information</h3>
+                    <p>We collect the following categories of personal information:</p>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Account Information:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Full name, email address, phone number</li>
+                                <li>Date of birth, nationality, country of residence</li>
+                                <li>Profile photograph (optional)</li>
+                                <li>Username and encrypted password</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">3. How We Use Your Information</h2>
-                <p>We use the information we collect to provide our services, communicate with you, improve our website, and for marketing purposes. Specifically, this includes scheduling consultations, assisting with university applications, responding to inquiries, and sending newsletters if you've opted-in.</p>
+                        <div>
+                            <h4 class="font-semibold text-lg">Academic Information:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Educational background and transcripts</li>
+                                <li>Test scores (GRE, TOEFL, IELTS, SAT, etc.)</li>
+                                <li>Academic achievements, certifications, and awards</li>
+                                <li>Research experience and publications</li>
+                                <li>Extracurricular activities and leadership roles</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">4. How We Share Your Information</h2>
-                <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
-                <ul>
-                    <li><strong>With Educational Institutions:</strong> With your explicit consent, we will share your application information with the universities and colleges you choose to apply to.</li>
-                    <li><strong>With Service Providers:</strong> We may share information with third parties who perform services on our behalf, such as data hosting (e.g., Google Sheets for form submissions).</li>
-                    <li><strong>For Legal Reasons:</strong> If required by law or to respond to a valid legal process.</li>
-                </ul>
+                        <div>
+                            <h4 class="font-semibold text-lg">Career and Personal Preferences:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Career goals and interests</li>
+                                <li>Personality assessment responses (50+ data points)</li>
+                                <li>Course and university preferences</li>
+                                <li>Budget constraints and financial information</li>
+                                <li>Geographic preferences for study destinations</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">5. Data Security</h2>
-                <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
+                        <div>
+                            <h4 class="font-semibold text-lg">Application Documents:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Resumes/CVs and cover letters</li>
+                                <li>Statements of Purpose (SOPs) and essays</li>
+                                <li>Letters of recommendation</li>
+                                <li>Portfolio materials and project samples</li>
+                                <li>Plagiarism detection reports</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">6. Your Rights and Choices</h2>
-                <p>You have the right to access, correct, or request deletion of your personal information. You can also opt out of marketing communications by following the "unsubscribe" link in our emails. To exercise these rights, please contact us at <a href="mailto:info.gradsurge@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">info.gradsurge@gmail.com</a>.</p>
+                        <div>
+                            <h4 class="font-semibold text-lg">Financial Information:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Scholarship application data</li>
+                                <li>Payment information for premium services</li>
+                                <li>Financial aid requirements and family income data</li>
+                                <li>Banking details for refunds (encrypted)</li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">7. Third-Party Links</h2>
-                <p>Our website may contain links to other sites. We are not responsible for the content or privacy practices of these other sites.</p>
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">2.2 Automatically Collected Information</h3>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Technical Data:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>IP address, device ID, and browser information</li>
+                                <li>Operating system and device specifications</li>
+                                <li>Login times, session duration, and usage patterns</li>
+                                <li>Geolocation data (with consent)</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">8. Changes to This Privacy Policy</h2>
-                <p>We may update this policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date.</p>
+                        <div>
+                            <h4 class="font-semibold text-lg">AI Interaction Data:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Quiz responses and assessment results</li>
+                                <li>Recommendation feedback and ratings</li>
+                                <li>Search queries and filter preferences</li>
+                                <li>Document upload and revision history</li>
+                                <li>Time spent on different platform sections</li>
+                            </ul>
+                        </div>
 
-                <h2 class="text-2xl font-bold text-primary-900 dark:text-white">9. Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:info.gradsurge@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">info.gradsurge@gmail.com</a>.</p>
+                        <div>
+                            <h4 class="font-semibold text-lg">Cookies and Tracking:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Essential cookies for platform functionality</li>
+                                <li>Analytics cookies for usage optimization</li>
+                                <li>Preference cookies for personalized experience</li>
+                                <li>Third-party tracking pixels (with consent)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">2.3 Third-Party Information</h3>
+                    <ul class="list-disc ml-6">
+                        <li>Data from Google OAuth integration</li>
+                        <li>University application system integrations</li>
+                        <li>Reference information from recommenders</li>
+                        <li>Verification data from educational institutions</li>
+                    </ul>
+                </section>
+
+                <!-- Section 3 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">3. How We Use Your Information</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">3.1 Primary Purposes</h3>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Service Delivery:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Provide personalized course and university recommendations</li>
+                                <li>Generate AI-powered resume and SOP evaluations</li>
+                                <li>Match relevant scholarships and funding opportunities</li>
+                                <li>Create adaptive test preparation schedules</li>
+                                <li>Track application progress and send reminders</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">AI and Machine Learning:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Train and improve our recommendation algorithms</li>
+                                <li>Develop predictive admission chance models</li>
+                                <li>Enhance resume scoring and ATS simulation</li>
+                                <li>Optimize scholarship matching accuracy</li>
+                                <li>Personalize user experience and content</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">Platform Operations:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Authenticate users and maintain account security</li>
+                                <li>Process payments for premium services</li>
+                                <li>Provide customer support and technical assistance</li>
+                                <li>Send important service-related notifications</li>
+                                <li>Maintain platform performance and security</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">3.2 Secondary Purposes (With Consent)</h3>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Marketing and Communications:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Send newsletters and educational content</li>
+                                <li>Promote relevant services and features</li>
+                                <li>Conduct user surveys and research</li>
+                                <li>Share success stories (anonymized)</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">Analytics and Research:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Analyze platform usage patterns</li>
+                                <li>Conduct educational outcome research</li>
+                                <li>Improve AI model performance</li>
+                                <li>Generate anonymized industry insights</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">4. AI Processing and Algorithmic Decisions</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">4.1 AI System Transparency</h3>
+                    <p>Our AI systems process your data to:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Generate course and career fit scores (0-100 scale)</li>
+                        <li>Predict university admission chances (percentage likelihood)</li>
+                        <li>Score resume compatibility with ATS systems</li>
+                        <li>Evaluate SOP quality and provide improvement suggestions</li>
+                        <li>Match scholarships based on eligibility criteria</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">4.2 Automated Decision-Making</h3>
+                    <p>We use automated processing for:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Initial course and university recommendations</li>
+                        <li>Basic scholarship eligibility screening</li>
+                        <li>Resume scoring and feedback generation</li>
+                        <li>Plagiarism detection in application documents</li>
+                    </ul>
+                    <p class="font-semibold mt-4">Important: All AI recommendations are suggestive only. Final decisions regarding applications, course selection, and career choices remain entirely with you.</p>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">4.3 Right to Explanation</h3>
+                    <p>You have the right to:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Request explanation of any AI recommendation</li>
+                        <li>Understand the data factors influencing suggestions</li>
+                        <li>Request human review of automated decisions</li>
+                        <li>Opt-out of specific AI processing while retaining basic services</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">5. Data Sharing and Disclosure</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">5.1 Third-Party Service Providers</h3>
+                    <p>We share data with trusted partners for:</p>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Technical Services:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Cloud hosting and data storage (AWS, encrypted)</li>
+                                <li>Email delivery and communication services</li>
+                                <li>Payment processing (PCI DSS compliant)</li>
+                                <li>Analytics and performance monitoring</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">Educational Services:</h4>
+                            <ul class="list-disc ml-6">
+                                <li>University application system integrations</li>
+                                <li>Test preparation content providers</li>
+                                <li>Plagiarism detection services</li>
+                                <li>Academic verification services</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">5.2 Educational Institutions</h3>
+                    <p>With your explicit consent, we may share:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Application documents and academic records</li>
+                        <li>Contact information for admissions communication</li>
+                        <li>Progress updates and completion certificates</li>
+                        <li>Anonymized performance analytics</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">5.3 Legal Requirements</h3>
+                    <p>We may disclose information when legally required:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Court orders, subpoenas, or legal process</li>
+                        <li>Law enforcement investigations</li>
+                        <li>Protection of our rights, property, or safety</li>
+                        <li>Prevention of fraud or illegal activities</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">5.4 Business Transfers</h3>
+                    <p>In case of merger, acquisition, or sale, your information may be transferred to the successor entity with prior notice and consent options.</p>
+                    <p class="font-semibold mt-4">We never sell personal information to third parties for marketing purposes.</p>
+                </section>
+
+                <!-- Section 6 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">6. Data Security and Retention</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">6.1 Security Measures</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Encryption:</strong> AES-256 encryption for data at rest and in transit</li>
+                        <li><strong>Authentication:</strong> JWT-based secure login with multi-factor options</li>
+                        <li><strong>Access Control:</strong> Role-based permissions and regular access audits</li>
+                        <li><strong>Monitoring:</strong> 24/7 security monitoring and incident response</li>
+                        <li><strong>Compliance:</strong> SOC 2 Type II and ISO 27001 security standards</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">6.2 Data Retention Periods</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Active Accounts:</strong> Data retained while account is active plus 2 years</li>
+                        <li><strong>Inactive Accounts:</strong> Deleted after 3 years of inactivity</li>
+                        <li><strong>Application Documents:</strong> Retained for 5 years for reference purposes</li>
+                        <li><strong>Financial Records:</strong> 7 years as required by law</li>
+                        <li><strong>Analytics Data:</strong> Anonymized and retained indefinitely</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">6.3 Data Minimization</h3>
+                    <p>We implement data minimization principles:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Collect only necessary information for stated purposes</li>
+                        <li>Regular data audits and unnecessary data deletion</li>
+                        <li>Automated data lifecycle management</li>
+                        <li>Purpose limitation enforcement</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">7. Your Privacy Rights</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">7.1 Access and Portability</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Data Access:</strong> Download all your personal data in JSON/CSV format</li>
+                        <li><strong>Data Portability:</strong> Export data for use with other platforms</li>
+                        <li><strong>Account Dashboard:</strong> Real-time view of all collected information</li>
+                        <li><strong>Processing History:</strong> Log of all data processing activities</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">7.2 Correction and Update</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Profile Management:</strong> Update personal and academic information</li>
+                        <li><strong>Document Replacement:</strong> Upload new versions of application materials</li>
+                        <li><strong>Preference Changes:</strong> Modify course and university preferences</li>
+                        <li><strong>Contact Updates:</strong> Change email, phone, or address information</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">7.3 Deletion and Opt-Out</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Account Deletion:</strong> Complete removal within 30 days of request</li>
+                        <li><strong>Selective Deletion:</strong> Remove specific documents or data categories</li>
+                        <li><strong>AI Opt-Out:</strong> Disable AI processing while retaining basic features</li>
+                        <li><strong>Marketing Opt-Out:</strong> Unsubscribe from promotional communications</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">7.4 Consent Management</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Granular Controls:</strong> Feature-specific privacy settings</li>
+                        <li><strong>Consent Withdrawal:</strong> Revoke consent for specific data uses</li>
+                        <li><strong>Third-Party Controls:</strong> Manage integrations and data sharing</li>
+                        <li><strong>Cookie Preferences:</strong> Customize tracking and analytics settings</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">7.5 Rights for EU Residents (GDPR)</h3>
+                    <p>Additional rights under GDPR:</p>
+                    <ul class="list-disc ml-6">
+                        <li>Right to restrict processing</li>
+                        <li>Right to object to processing</li>
+                        <li>Right to data portability</li>
+                        <li>Right to lodge complaints with supervisory authorities</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">7.6 Rights for California Residents (CCPA)</h3>
+                    <ul class="list-disc ml-6">
+                        <li>Right to know about personal information collection</li>
+                        <li>Right to delete personal information</li>
+                        <li>Right to opt-out of sale of personal information</li>
+                        <li>Right to non-discrimination for exercising privacy rights</li>
+                    </ul>
+                </section>
+
+                <!-- Section 8 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">8. International Data Transfers</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">8.1 Data Localization</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Primary Storage:</strong> India-based servers for Indian users</li>
+                        <li><strong>EU Storage:</strong> EU-based servers for European users</li>
+                        <li><strong>Global CDN:</strong> Distributed content delivery for performance</li>
+                        <li><strong>Data Residency:</strong> Compliance with local data residency requirements</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">8.2 Transfer Safeguards</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Standard Contractual Clauses:</strong> EU-approved data transfer agreements</li>
+                        <li><strong>Adequacy Decisions:</strong> Transfers to countries with adequate protection</li>
+                        <li><strong>Binding Corporate Rules:</strong> Internal data transfer protocols</li>
+                        <li><strong>User Consent:</strong> Explicit consent for necessary transfers</li>
+                    </ul>
+                </section>
+
+                <!-- Section 9 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">9. Children's Privacy (COPPA)</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">9.1 Age Requirements</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Minimum Age:</strong> 13 years old (16 in EU)</li>
+                        <li><strong>Parental Consent:</strong> Required for users under 18</li>
+                        <li><strong>Verification:</strong> Age verification during account creation</li>
+                        <li><strong>Educational Use:</strong> Special protections for school-sponsored accounts</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">9.2 Enhanced Protections</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Limited Data Collection:</strong> Minimal necessary information only</li>
+                        <li><strong>No Behavioral Advertising:</strong> Prohibited for minor users</li>
+                        <li><strong>Parental Access:</strong> Parents can review and delete child's data</li>
+                        <li><strong>Educational Purpose:</strong> Data use strictly limited to educational services</li>
+                    </ul>
+                </section>
+
+                <!-- Section 10 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">10. Cookies and Tracking</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">10.1 Cookie Categories</h3>
+                    
+                    <div class="ml-4 space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-lg">Essential Cookies (Always Active):</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Authentication and session management</li>
+                                <li>Security and fraud prevention</li>
+                                <li>Basic platform functionality</li>
+                                <li>User preference storage</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">Analytics Cookies (Optional):</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Usage statistics and performance monitoring</li>
+                                <li>Feature usage analysis</li>
+                                <li>Error tracking and debugging</li>
+                                <li>Platform optimization insights</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-lg">Marketing Cookies (Opt-In Required):</h4>
+                            <ul class="list-disc ml-6">
+                                <li>Personalized content delivery</li>
+                                <li>Advertising effectiveness measurement</li>
+                                <li>Social media integration</li>
+                                <li>Third-party marketing platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">10.2 Cookie Management</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Cookie Banner:</strong> Clear opt-in/opt-out choices</li>
+                        <li><strong>Preference Center:</strong> Granular cookie controls</li>
+                        <li><strong>Browser Settings:</strong> Instructions for browser-level management</li>
+                        <li><strong>Regular Review:</strong> Annual cookie audit and updates</li>
+                    </ul>
+                </section>
+
+                <!-- Section 11 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">11. Updates to Privacy Policy</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">11.1 Notification Process</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Email Notification:</strong> 30 days advance notice for material changes</li>
+                        <li><strong>Platform Notification:</strong> In-app alerts and banners</li>
+                        <li><strong>Version History:</strong> Previous policy versions available for review</li>
+                        <li><strong>Consent Renewal:</strong> Re-consent required for significant changes</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">11.2 Change Categories</h3>
+                    <ul class="list-disc ml-6">
+                        <li><strong>Minor Updates:</strong> Technical corrections and clarifications</li>
+                        <li><strong>Material Changes:</strong> New data uses, sharing practices, or rights</li>
+                        <li><strong>Emergency Updates:</strong> Security-related immediate changes</li>
+                        <li><strong>Legal Updates:</strong> Compliance with new regulations</li>
+                    </ul>
+                </section>
+
+                <!-- Section 12 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">12. Contact Information</h2>
+                    
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3">12.1 Privacy Officer</h3>
+                    <p><strong>Email:</strong> <a href=" info.gradsurge@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline"> info.gradsurge@gmail.com</a></p>
+                    <p><strong>Name:</strong> Gradsurge Technologies Private Limited</p>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">12.2 Data Protection Requests</h3>
+                    <p><strong>Email:</strong> <a href="mailto: info.gradsurge@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline"> info.gradsurge@gmail.com</a></p>
+                    <p><strong>Response Time:</strong> 30 days maximum</p>
+                    <p><strong>Verification Required:</strong> Identity verification for all requests</p>
+
+                    <h3 class="text-xl font-semibold text-primary-800 dark:text-primary-200 mb-3 mt-6">12.3 Complaints and Concerns</h3>
+                    <p><strong>Email:</strong> <a href="mailto: info.gradsurge@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline"> info.gradsurge@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+919892604962" class="text-primary-800 dark:text-primary-300 hover:text-amber-500">+91 9892604962</a></p>
+                    <p><strong>Escalation:</strong> CEO office for unresolved issues</p>
+                </section>
+
+                <!-- Section 13 -->
+                <section>
+                    <h2 class="text-2xl font-bold text-primary-900 dark:text-white mb-4">13. Governing Law</h2>
+                    <p>This Privacy Policy is governed by the laws of India and applicable international data protection regulations. Any disputes shall be subject to the exclusive jurisdiction of Mumbai courts.</p>
+                    <p class="mt-4"><strong>Effective Date:</strong> October 2, 2025</p>
+                    <p><strong>Version:</strong> 1.0</p>
+                    <p><strong>Next Review:</strong> April 2026</p>
+                </section>
+
+                <div class="border-t border-slate-300 dark:border-slate-700 pt-6 mt-8">
+                    <p class="text-center italic text-slate-600 dark:text-slate-400">By using Gradsurge services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+                </div>
+
             </div>
         </div>
     </main>
 
-    <!-- Reusing your existing Footer -->
+    <!-- Footer -->
     <footer class="bg-primary-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="border-t border-primary-900 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
                 <p class="text-primary-300 mb-4 md:mb-0">© 2025 GradSurge. All rights reserved.</p>
                 <div class="flex space-x-6">
                     <a href="/privacy-policy.html" class="text-amber-400">Privacy Policy</a>
-                    <a href="#" class="text-primary-300 hover:text-amber-400">Terms of Service</a>
+                    <a href="/terms-of-service.html" class="text-primary-300 hover:text-amber-400">Terms of Service</a>
+                    <a href="/legal-documentation.html" class="text-amber-400">Legal Documentation</a>
                 </div>
             </div>
         </div>
     </footer>
+<script>
+    // --- SCROLL PROGRESS BAR LOGIC START ---
+const progressBar = document.getElementById('scroll-progress-bar');
+const updateProgressBar = () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    const scrollableHeight = scrollHeight - clientHeight;
+    const scrollPercent = (scrollTop / scrollableHeight) * 100;
 
-    <script>
-        // You can add the dark/light mode toggle script here if you want it on this page
-        // For simplicity, it has been omitted, but the page will respect the OS preference
+    if (progressBar) {
+        progressBar.style.width = `${scrollPercent}%`;
+    }
+};
+window.addEventListener('scroll', updateProgressBar);
+// --- SCROLL PROGRESS BAR LOGIC END ---
+        // Dark/Light Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+        
+        const setTheme = (isDark) => {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            }
+        };
+        
+        // Initialize theme
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+        
+        // Toggle theme on click
+        themeToggle.addEventListener('click', () => {
+            setTheme(!document.documentElement.classList.contains('dark'));
+        });
     </script>
 </body>
 </html>
