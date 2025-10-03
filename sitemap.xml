@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://gradsurge.com/</loc>
+  <lastmod>2025-10-03T15:20:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/login.html</loc>
+  <lastmod>2025-10-03T15:20:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/register.html</loc>
+  <lastmod>2025-10-03T15:20:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/privacy-policy.html</loc>
+  <lastmod>2025-10-03T15:20:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/terms-of-service.html</loc>
+  <lastmod>2025-10-03T15:20:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/legal-documentation.html</loc>
+  <lastmod>2025-10-03T15:20:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gradsurge.com/index.html</loc>
+  <lastmod>2025-10-03T15:20:32+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
